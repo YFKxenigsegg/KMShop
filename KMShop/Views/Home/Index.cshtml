@@ -1,0 +1,24 @@
+﻿@model IEnumerable<KMShop.Models.Car>
+@{
+    ViewData["Title"] = "Каталог товаров";
+} 
+<h3>Машины</h3>
+    <table>
+        <tr>
+            <td>Марка авто</td>
+            <td>Модель</td>
+            <td>Год выпуска</td>
+            <td>Цена</td>
+            <td></td>
+        </tr>
+        @foreach (var car in Model)
+        {
+            <tr>
+                <td>@car.CarName</td>
+                <td>@car.CarModel</td>
+                <td>@car.YearOfIssue</td>
+                <td>@car.CarCost</td>
+                <td><a href="~/Home/Buy/@car.Id">Купить</a></td>
+            </tr>
+        }
+    </table>
