@@ -1,7 +1,9 @@
 ﻿using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using KMShop.Models;
+using KMShop.Data.Repository;
 using System.Threading.Tasks;
+using KMShop.Data.Interfaces;
 
 namespace KMShop.Controllers
 {

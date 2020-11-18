@@ -1,14 +1,12 @@
 ﻿using KMShop.Data.Interfaces;
 using KMShop.Models;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace KMShop.Data.Repository
 {
-    public class CarRepository : IAllCars
+    public class CarRepository : RepositoryBase<Car>, IAllCars
     {
         private readonly CarDbContext carContext;
         public CarRepository(CarDbContext carContext)
@@ -17,7 +15,6 @@ namespace KMShop.Data.Repository
         }
         public IEnumerable<Car> Cars { get => carContext.Cars.Include(c => c.CarName); }
 
-        public Car getCar(int carId) => carContext.Cars.FirstOrDefault(c => c.Id == carId);
-       
+        public Car getCar(int carId) => carContext.Cars.FirstOrDefault(c => c.Id == carId);       
     }
 }

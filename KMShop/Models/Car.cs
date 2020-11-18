@@ -1,13 +1,13 @@
-﻿using System;
+﻿using KMShop.Models.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace KMShop.Models
 {
-    public class Car
+    public class Car : EntityBase
     {
-        public int Id { get; set; }
         public string CarName { get; set; }
         public string CarModel { get; set; }
         public int YearOfIssue { get; set; }

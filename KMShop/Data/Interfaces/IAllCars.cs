@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KMShop.Data.Interfaces
 {
-    interface IAllCars
+    public interface IAllCars : IRepository<Car>
     {
         IEnumerable<Car> Cars { get; }
         Car getCar(int carId);
